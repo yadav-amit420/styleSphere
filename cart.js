@@ -67,10 +67,9 @@ if(positionItemInCart >= 0){
             }
             break;
         }
-        if (window.location.pathname === '/cart.html') {
-            addCartToHTML();
-            localStorage.setItem('carts', JSON.stringify(carts));
-        }
+        addCartToHTML();
+        localStorage.setItem('carts', JSON.stringify(carts));
+        
     }
 };
 
