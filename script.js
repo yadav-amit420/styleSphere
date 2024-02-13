@@ -27,7 +27,7 @@ const addFeaturedProductHTML = () => {
             newProduct.dataset.id = pd.id;
             newProduct.innerHTML =  `
             <div class="pro-info">
-                <a href="/productDetails.html?id=${pd.id}">
+                <a href="styleSphere/productDetails.html?id=${pd.id}">
                     <img src="${pd.mainImage}">
                 </a>
                 <span>Zara</span>
@@ -60,7 +60,7 @@ const addNewArrivalHTML = () => {
             newProduct.dataset.id = pd.id;
             newProduct.innerHTML =  `
             <div class="pro-info">
-                <a href="/productDetails.html?id=${pd.id}">
+                <a href="styleSphere/productDetails.html?id=${pd.id}">
                     <img src="${pd.mainImage}">
                 </a>
                 <span>Zara</span>
@@ -93,7 +93,7 @@ const addShopHTML = () => {
             newProduct.dataset.id = pd.id;
             newProduct.innerHTML =  `
             <div class="pro-info">
-                <a href="/productDetails.html?id=${pd.id}">
+                <a href="styleSphere/productDetails.html?id=${pd.id}">
                     <img src="${pd.mainImage}">
                 </a>
                 <span>Zara</span>

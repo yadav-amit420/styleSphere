@@ -27,9 +27,7 @@ const addCartToHTML = () => {
     }
 }
 
-if (window.location.pathname === '/cart.html') {
-    addCartToHTML();
-}
+addCartToHTML();
 
 //REMOVE from CART by REMOVE ICON
 cartHTML.addEventListener('click', (event) => {
