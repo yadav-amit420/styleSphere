@@ -1,14 +1,11 @@
 function toggleMenu(){
     const bar = document.querySelector("#close");
     const nav = document.querySelector("#navbar");
-    // const cartIcon = document.querySelectorAll("cart");
-    // cartIcon.classList.toggle("aCart");
     bar.classList.toggle("active");
     nav.classList.toggle("active");
 
 }
 
-//Fetured Product
 let fProHTML = document.querySelector('.featured-product');
 let fPro = JSON.parse(localStorage.getItem('fPro')) || [];
 
@@ -20,8 +17,7 @@ let products = JSON.parse(localStorage.getItem('products')) || [];
 
 let carts = JSON.parse(localStorage.getItem('carts')) || [];
 
-
-
+//Fetured Product
 const addFeaturedProductHTML = () => {
     fProHTML.innerHTML = '';
     if(fPro.length > 0){
@@ -151,7 +147,7 @@ const addToCart = (product_id) => {
     console.log(carts);
 }
 
-//PRODUCT DETAILS, have called this function in productDetails.html internal script
+//PRODUCT DETAILS,{showdetails();} have called this function in productDetails.html internal script
 
 const showDetail = () => {
     let detail = document.querySelector('#prodetails');
@@ -175,9 +171,6 @@ const showDetail = () => {
     subImg.querySelector('.small-img-col-3 img').src = thisProduct.subImages[3];
 }
 
-if (window.location.pathname === '/productDetails.html') {
-    showDetail();
-}
 //to swap sub images with main image
 let bigImage = document.getElementById("bigImg");
 let smallImage = document.getElementsByClassName("small-img");
@@ -190,10 +183,8 @@ for (let i = 0; i < smallImage.length; i++) {
     smallImage[i].addEventListener('click', changeMainImage);
 }
 
-//CART UPDATE AND REMOVE
 
-
-
+//fetch and calling 
 const initApp = () =>{
 
     // Fetch and insert header
@@ -213,7 +204,7 @@ const initApp = () =>{
         fPro = data;
         localStorage.setItem('fPro', JSON.stringify(fPro));
         addFeaturedProductHTML();
-        console.log(fPro)
+        
     });
     
     // Fetch and insert New Arrival Products
@@ -223,22 +214,18 @@ const initApp = () =>{
         newAr = data;
         localStorage.setItem('newAr', JSON.stringify(newAr));
         addNewArrivalHTML();
-        console.log(newAr)
+        
     });
 
     // script.js (Frontend)
 
-    fetch('http://localhost:3000/products')
+    fetch('product.json')
     .then(response => response.json())
     .then(data => {
         products = data;
-        console.log(data);
-      })
-      .catch(error => {
-        console.error('Error fetching data', error);
-      });
-
-
+        localStorage.setItem('products', JSON.stringify(products));
+        addShopHTML();
+    });
 }
 
 initApp();
