@@ -1,0 +1,123 @@
+[
+  {
+    "id": 9,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n1.jpg",
+    "subImages": [
+      "img/products/n1.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+  
+  {
+    "id": 10,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n2.jpg",
+    "subImages": [
+      "img/products/n2.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+
+  {
+    "id": 11,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n3.jpg",
+    "subImages": [
+      "img/products/n3.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+
+  {
+    "id": 12,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n4.jpg",
+    "subImages": [
+      "img/products/n4.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+
+  {
+    "id": 13,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n5.jpg",
+    "subImages": [
+      "img/products/n5.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+
+  {
+    "id": 14,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n6.jpg",
+    "subImages": [
+      "img/products/n6.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+
+  {
+    "id": 15,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n7.jpg",
+    "subImages": [
+      "img/products/n7.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  },
+
+  {
+    "id": 16,
+    "name": "Men's Fashion T Shirt",
+    "category": "T-Shirt",
+    "price": 139.00,
+    "mainImage": "img/products/n8.jpg",
+    "subImages": [
+      "img/products/n8.jpg",
+      "img/products/f2.jpg",
+      "img/products/f3.jpg",
+      "img/products/f4.jpg"
+    ],
+    "description": "A cotton shirt is a classic and versatile garment..."
+  }
+
+
+]
