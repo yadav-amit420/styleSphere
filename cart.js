@@ -52,7 +52,7 @@ const addCartToHTML = () => {
  
 }
 
-if (window.location.pathname === '/cart.html') {
+if (window.location.pathname === '/styleSphere/cart.html') {
     addCartToHTML();
 }
 
