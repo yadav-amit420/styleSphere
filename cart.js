@@ -1,6 +1,7 @@
 let cartHTML = document.querySelector('.listCart');
 const addCartToHTML = () => {
     cartHTML.innerHTML = '';
+    let totalCartAmount = 0;
     if(carts.length > 0){
          console.log(carts)
         carts.forEach(cart => {
@@ -8,7 +9,8 @@ const addCartToHTML = () => {
             newCart.classList.add('item');
             let positionProduct = products.findIndex((value) => value.id == cart.product_id);
             let info = products[positionProduct]
-
+            let totalAmount = cart.quantity*info.price;
+            totalCartAmount += totalAmount;
             newCart.dataset.id = cart.product_id;
             newCart.innerHTML= `
                 <i class="fa-solid fa-circle-xmark remove"></i>
@@ -20,14 +22,39 @@ const addCartToHTML = () => {
                     <span>${cart.quantity}</span>
                     <span class="plus">+</span>
                 </td>
-                <td class="totalPrice">$${cart.quantity*info.price}</td> 
+                <td class="totalPrice">$${totalAmount}</td> 
             `;
         cartHTML.appendChild(newCart);
         })
     }
+    //CART VALUE AND SHIPPPING CHARGES
+    const subTotal = document.querySelector('.subtotal');
+    const shippingCostElement = document.querySelector('.shipping-cost');
+    const total = document.querySelector('.totalAmount');
+
+    if (carts.length === 0) {
+        subTotal.textContent = ''; 
+        shippingCostElement.textContent = '';
+        total.textContent = '';  
+    } else {
+        subTotal.textContent = `$${totalCartAmount.toFixed(2)}`;
+
+        const shippingCost = totalCartAmount > 500 ? 0 : 49; 
+        if (shippingCost === 0) {
+            shippingCostElement.textContent = 'Free';
+        } else {
+            shippingCostElement.textContent = `$${shippingCost}`; 
+        }
+
+        const totalWithShipping = totalCartAmount + shippingCost; 
+        total.innerHTML = `<strong>$${totalWithShipping.toFixed(2)}</strong>`;
+    } 
+ 
 }
 
-addCartToHTML();
+if (window.location.pathname === '/cart.html') {
+    addCartToHTML();
+}
 
 //REMOVE from CART by REMOVE ICON
 cartHTML.addEventListener('click', (event) => {
